@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff3366;
+}
+
+/* Cake container */
+.cake-container {
+    perspective: 1000px;
+    margin-bottom: 50px;
+}
+
+/* Cake */
+.cake {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/* Cake Layers */
+.layer {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    border-radius: 100px / 50px;
+    /* ellipse shape */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.layer1 {
+    bottom: 0;
+    background: #ff6666;
+    z-index: 1;
+}
+
+.layer2 {
+    bottom: 50px;
+    background: #ff9999;
+    z-index: 2;
+}
+
+.layer3 {
+    bottom: 100px;
+    background: #ffcccc;
+    z-index: 3;
+}
+
+/* Candle */
+.candle {
+    position: absolute;
+    top: -20px;
+    left: 90px;
+    width: 20px;
+    height: 40px;
+    background: yellow;
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.flame {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 8px;
+    height: 15px;
+    background: orange;
+    border-radius: 50%;
+    transform: translateX(-50%) scaleY(1);
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleY(1.2);
+    }
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #ff6f61;
+    color: white;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #ff3b2d;
+}
+
+/* Button vanish animation */
+button.vanish {
+    animation: vanish 0.5s forwards;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
