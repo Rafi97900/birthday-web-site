@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🎂 Birthday Intro */
+.birthday-intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #2a001f, #000);
+    padding: 30px;
+}
+
+.cake {
+    font-size: 60px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.birthday-intro h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+.birthday-intro h2 {
+    font-size: 1.8rem;
+    opacity: .9;
+    margin: 10px 0;
+}
+
+.birthday-intro p {
+    max-width: 500px;
+    opacity: .8;
+}
+
+.scroll-hint {
+    margin-top: 30px;
+    opacity: .6;
+}
+
+/* Common */
+.scene {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+.center-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-text h1 {
+    background: rgba(0, 0, 0, .4);
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+/* Reel Video */
+.reel-video {
+    height: 100vh;
+    position: relative;
+}
+
+.reel-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reel-text {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    font-size: 2.8rem;
+    text-shadow: 0 0 20px black;
+}
+
+/* Night */
+.night {
+    filter: blur(4px);
+    transition: 1s;
+}
+
+.night:hover {
+    filter: blur(0);
+}
+
+.night p {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    max-width: 500px;
+}
+
+/* Heartbeat */
+.heartbeat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: beat 1.5s infinite;
+    padding: 40px;
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+/* Final */
+.final {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #000000, #1b0d0a);
+}
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.amor {
+    color: #ff69b4;
+}
+#finalText {
+    font-weight: bold;
+    /* makes all text bold */
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
